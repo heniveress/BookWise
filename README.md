@@ -1,4 +1,5 @@
 # Book Recommendation Website
+_Project developed as part of a web technology course (2023)_
 
 ## Project Overview
 
@@ -35,5 +36,3 @@ This project is a web application for a **Book Recommendation Platform**. Develo
 ## Additional Functionalities
 - **File Upload**: Users can upload files (e.g., book cover images) to the server.
 - **Client-Side Network Requests**: Uses Fetch API for seamless client-server interactions, such as submitting forms and refreshing page sections.
-
-### Project developed as part of a web technology course (2023).
