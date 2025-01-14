@@ -1,0 +1,81 @@
+<h3>Új könyvajánlás feltöltése</h3>
+
+<form id="form-container" name="bookInsertForm" enctype="multipart/form-data" method="POST" action="/book/insert">
+
+    <div class="labels">
+        <label id="cim-label" for="cim">Cím</label>
+    </div>
+    <div class="input-tab">
+        <input class="input-field" type="text" id="cim" name="cim" placeholder="Könyv címe" required autofocus>
+    </div>
+
+    <div class="labels">
+        <label id="szerzo-label" for="szerzo">Szerző</label>
+    </div>
+    <div class="input-tab">
+        <input class="input-field" type="text" id="szerzo" name="szerzo">
+    </div>
+
+    <div class="labels">
+        <label id="kiado-label" for="szerzo">Kiadó</label>
+    </div>
+    <div class="input-tab">
+        <input class="input-field" type="text" id="kiado" name="kiado">
+    </div>
+
+    <div class="labels">
+        <label id="ar-label" for="ar">Online ár:</label>
+    </div>
+    <div class="input-tab">
+        <input class="input-field" type="text" id="ar" name="ar" placeholder="50">
+    </div>
+
+    <div class="labels">
+        <label for="mufaj">Műfaj</label>
+    </div>
+    <div class="input-tab">
+        <select id="mufaj" name="mufaj">
+        <option disabled value="ertek" selected>Select an option</option>
+
+        <%for (let mufaj of mufajok) { %>
+            <option value="<%=mufaj.id%>"> <%= mufaj.nev %> </option>
+        <%} %>
+
+        </select>
+    </div>
+
+    <div class="labels">
+        <label for="kezdet" class="item"> Kiadás dátuma: </label>
+    </div>
+    <div class="input-tab">
+        <input
+            class="input-field"
+            type="date"
+            id="datum"
+            name="datum"
+            placeholder="éééé-hh-nn"
+            pattern="\d{4}-\d{2}-\d{2}"
+        />
+    </div>
+       
+    <div class="labels">
+     <label for="leiras">Véleményed</label>
+    </div>
+    <div class="input-tab">
+     <textarea class="input-field" id="leiras" name="leiras" rows="10" cols="40" placeholder="Miért ajánlod a könyvet?"></textarea>
+    </div>
+
+    <div class="labels">
+        <label for="kep" class="item"> Borítókép </label>
+    </div>
+    <div class="input-tab">
+        <input id="kep" type="file" name="boritokep" class="input-field" accept="image/*">
+    </div>
+   
+    <div class="btn">
+     <button id="submit" type="submit">Submit</button>
+    </div>
+   
+ </form>
+ 
+

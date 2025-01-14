@@ -1,0 +1,80 @@
+<style>
+    .alma {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .label {
+        font-weight: bold;
+    }
+
+    .value {
+        margin-left: 5px;
+    }
+
+    #userName {
+        font-size:x-large;
+    }
+</style>
+
+<div class="alma">
+    <div>
+        <img src="data:image/png;base64,<%=boritokep%>">
+    </div>
+    <div>
+        <div>
+            <span class="label">Feltöltötte:</span>
+            <span class="value" id="userName"><%=userName%></span>
+        </div>
+        <br><br>
+        <div>
+            <span class="label">Cím:</span>
+            <span class="value"><%=cim%></span>
+        </div>
+        <div>
+            <span class="label">Szerző:</span>
+            <span class="value"><%=szerzo%></span>
+        </div>
+        <div>
+            <span class="label">Kiadó:</span>
+            <span class="value"><%=kiado%></span>
+        </div>
+        <div>
+            <span class="label">Ár:</span>
+            <span class="value"><%=ar%> RON</span>
+        </div>
+        <div>
+            <span class="label">Műfaj:</span>
+            <span class="value"><%=mufaj%></span>
+        </div>
+        <div>
+            <span class="label">Kiadás dátuma:</span>
+            <span class="value"><%=kiadasDatum%></span>
+        </div>
+
+        <br><br><br>
+       
+        
+        <div class="btn">
+            <%if (user && (user.role === "admin" || (user.role === "user" && user.id == userId))) { %>
+                <a href="/book/<%=bookId%>/edit"><button id="submit" type="submit">Módosít</button></a>
+            <%} else { %>
+                <a href="/user/login"><button id="submit" type="submit">Módosít</button></a>
+            <%} %>
+        </div>
+    
+    </div>
+</div>    
+<div>
+    <br>
+    <div>
+        <span class="label">Vélemény:</span>
+    </div>
+    <br>
+    <div>
+        <span class="value"><%=leiras%></span>
+    </div>
+</div>
+  
+<!-- if (user && (user.role === "admin" || (user.role === "user" && user.id = userId))) -->

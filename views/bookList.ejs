@@ -1,0 +1,14 @@
+<div class="book-container">
+  
+  <% for(let book of books) { %>
+    <div class="book-item">
+
+      <img alt="Picture" src="data:image/png;base64,<%=book.img%>">      
+      <div class="desc">
+        <h3><%= book.title %></h3>
+        <a href="/book/<%=book.id%>"><button>Részletek</button></a>
+      </div>
+    </div>
+
+  <% } %>
+</div>

@@ -1,0 +1,81 @@
+<h3>Módosítás</h3>
+
+<form id="form-container" name="editForm" method="POST" action="/book/<%=book.id%>/edit">
+
+    <div class="labels">
+        <label id="cim-label" for="cim">Cím</label>
+    </div>
+    <div class="input-tab">
+        <input class="input-field" type="text" id="cim" name="cim" value="<%=book.cim%>" placeholder="Könyv címe" required autofocus>
+    </div>
+
+    <div class="labels">
+        <label id="szerzo-label" for="szerzo">Szerző</label>
+    </div>
+    <div class="input-tab">
+        <input class="input-field" type="text" id="szerzo" value="<%=book.szerzoNev%>"  name="szerzo">
+    </div>
+
+    <div class="labels">
+        <label id="kiado-label" for="szerzo">Kiadó</label>
+    </div>
+    <div class="input-tab">
+        <input class="input-field" type="text" id="kiado" value="<%=book.kiado%>" name="kiado">
+    </div>
+
+    <div class="labels">
+        <label id="ar-label" for="ar">Online ár:</label>
+    </div>
+    <div class="input-tab">
+        <input class="input-field" type="text" id="ar" name="ar" value=<%=book.ar%> placeholder="50">
+    </div>
+
+    <div class="labels">
+        <label for="mufaj">Műfaj</label>
+    </div>
+    <div class="input-tab">
+        <select id="mufaj" name="mufaj" >
+        <%for (let mufaj of mufajok) { %>
+            <% if (mufaj.id == book.mufajId) { %>
+                <option value="<%=mufaj.id%>" selected> <%= mufaj.nev %> </option>
+            <% } else { %>
+                <option value="<%=mufaj.id%>"> <%= mufaj.nev %> </option>
+            <%}%>
+            
+        <%} %>
+
+        </select>
+    </div>
+
+    <div class="labels">
+        <label for="kezdet" class="item"> Kiadás dátuma: </label>
+    </div>
+    <div class="input-tab">
+        <input
+            class="input-field"
+            type="date"
+            id="datum"
+            name="datum"
+            value="<%=book.kiadasDatum%>"
+            placeholder="éééé-hh-nn"
+            pattern="\d{4}-\d{2}-\d{2}"
+        />
+    </div>
+       
+    <div class="labels">
+     <label for="leiras">Véleményed</label>
+    </div>
+    <div class="input-tab">
+     <textarea class="input-field" id="leiras" name="leiras" rows="10" cols="40" placeholder="Miért ajánlod a könyvet?"><%=book.leiras%></textarea>
+    </div>
+   
+    <div class="btn">
+     <button id="submit" type="submit">Update</button>
+     <% if(user && user.role === "admin") { %>
+        <a href="/book/<%=book.id%>/remove" onclick="return confirm('Biztosan törli a <%= book.cim %> cimu konyvet?')"><button type="button" id="submit">Delete</button></a>
+     <% } %>
+    </div>
+   
+ </form>
+ 
+

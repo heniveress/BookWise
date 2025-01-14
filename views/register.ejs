@@ -1,0 +1,59 @@
+<h3>Regisztrálás</h3>
+
+<% if (error) { %>
+<p class="error"><%= error %></p>
+<% } %> 
+
+<form id="userform" method="POST" action="/user/register" >
+  <div class="container">
+    <label for="name" class="item"> <span>Név:</span></label>
+    <input
+      id="name"
+      class="input"
+      type="text"
+      name="name"
+      value="<%= userData.name %>"
+      class="item"
+      pattern=".{1,100}"
+      placeholder="Vezetéknév Személynév, max. 100 karakter"
+    >
+
+    <label for="email" class="item"> <span>Email cím:</span> </label>
+    <input
+      id="email"
+      class="input"
+      type="email"
+      name="email"
+      value="<%= userData.email %>"
+      class="item"
+      placeholder="nev@pelda.ro"
+      pattern="([a-z0-9_]|\-|\.)+@(([a-z0-9_]|\-)+\.)+[a-z]{2,10}"
+    >
+
+    <label for="password" class="item"> <span>Jelszó:</span></label>
+    <input
+      id="password"
+      class="input"
+      type="password"
+      name="password"
+      value=""
+      class="item"
+      pattern=".{4,100}"
+    >
+
+    <label for="password1" class="item"> <span>Jelszó még egyszer:</span></label>
+    <input
+      id="password1"
+      class="input"
+      type="password"
+      name="password1"
+      value=""
+      class="item"
+      pattern=".{4,100}"
+      placeholder="A jelszó minimum 4 karakter"
+    >
+
+    <label for="elkuld" class="item"> </label>
+    <input id="elkuld" type="submit" class="item" name="submit" value="Elküld" >
+    </div>
+</form>

@@ -1,0 +1,25 @@
+<div id="menu-holder">
+
+  <nav id="mainmenu" class="nav">
+    <ul id="menu">
+      <% for (const prop in menu) {%>
+      <li><a href="<%= menu[prop]%>"><%= prop %></a></li>
+      <% } %>
+    </ul>
+  </nav>
+
+  <nav id="loginmenu" class="nav">
+    <ul>
+      <% if (user) { %>
+        <div class="navnav">
+          <li class="role"><%= user.name %>, <%= user.role %></li>
+          <li><a href="/user/logout"><%= 'Kijelentkezés' %></a></li>
+        </div>
+      <% } else { %>
+        <li><a href="/user/login"><%= 'Bejelentkezés' %></a></li>
+        <li><a href="/user/register"><%= 'Regisztrálás' %></a></li>
+      <% } %>  
+    </ul>
+  </nav>
+
+</div>  

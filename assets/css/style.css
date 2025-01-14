@@ -1,0 +1,255 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  background-image: url(../images/hatter.jpg);
+}
+
+p, h1, h2, h6 {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+* {
+  font-family: Verdana, sans-serif;
+  /* font-family: 'Titillium Web', sans-serif; */
+}
+
+h1 {
+  font-size: 18pt;
+}
+
+#page {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 100vh; */
+
+  width: 70%;
+  margin: 0 auto;
+  /* padding: 60px; */
+  padding-top: 0px;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.856);
+}
+
+.header {
+  background-color: #333;
+  flex: 0 0 auto;
+}
+
+.header h1 {
+  text-align: center;
+}
+
+.footer {
+  background-color: #333;
+  height: 6vh;
+}
+.footer h6 {
+  text-align: center;
+}
+
+div#content {
+ 
+  padding: 2em;
+  flex-grow: 2;
+}
+
+.nav {
+  box-sizing: border-box;
+}
+
+.navnav{
+  display: flex;
+  color: white;
+}
+
+.article {
+  box-sizing: border-box;
+}
+
+/* menü */
+
+#menu-holder {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#mainmenu {
+  flex: auto;
+  box-sizing: border-box;
+  width: min-content;
+  width: 70%;
+}
+
+#loginmenu {
+  flex: auto;
+  box-sizing: border-box;
+  width: min-content;
+  width: 30%;
+  text-align: right;
+}
+/* mainmenu */
+ul#menu {
+  list-style-type: none;
+  width: 80%;
+}
+
+#menu li {
+  display: inline;
+  margin: 0.5em;
+  font-size: 12pt;
+  font-family: Verdana, Arial, sans-serif;
+}
+ul#menu li a {
+  text-decoration: none;
+  /* background-color: #808000; */
+  background-color: #4cbaa0;
+  padding: 0.3em;
+  color: white;
+  border-radius: 0.4em;
+}
+ul#menu li a:link {
+  color: #556b2f;
+  background-color: #408776;
+}
+ul#menu li a:visited {
+    background-color: #408776;
+}
+ul#menu li a:hover {
+  background-color: #4cbaa0;
+}
+
+ul#menu li.active a {
+  background-color: #4cbaa0;
+}
+
+/* loginmenu */
+#loginmenu ul {
+  list-style-type: none; 
+}
+
+#loginmenu ul li  {
+  padding: 0.3em;
+  display: inline;
+}
+
+#loginmenu ul li a {
+  text-decoration: none;
+  color: white;
+  border: #4cbaa0 solid 1px ;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+li a:hover {
+  background-color: #4cbaa0;
+}
+
+li.active a {
+  background-color: #4cbaa0;
+}
+
+/* form */
+.container {
+  display: flex;
+  flex-wrap: wrap ;   
+  border: 1px solid black;
+  width: 35em;
+  padding: 1em;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+/* egy doboz alap mérete */  
+#userform .item {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0.5em;
+}
+
+#userform input {
+  align-self: center;
+  flex-grow: 1;
+}
+
+#userform #butt{
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0.5em;
+  text-align: left;
+}    
+
+#userform #err{
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0.5em;
+  text-align: right;
+  color: red;
+}    
+
+#userform button {
+  width: 20%;
+}
+
+.error {
+  color: red;
+}
+
+/* form */
+.container {
+  display: flex;
+  flex-wrap: wrap ;   
+  border: 1px solid black;
+  width: 35em;
+  padding: 1em;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+/* egy doboz alap mérete */  
+#userform .item {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0.5em;
+}
+
+#userform input {
+  align-self: center;
+  flex-grow: 1;
+}
+
+#userform #butt{
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0.5em;
+  text-align: left;
+}    
+
+#userform #err{
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0.5em;
+  text-align: right;
+  color: red;
+}    
+
+#userform button {
+  width: 20%;
+}
+
+.error {
+  color: red;
+}
+
+.protected {
+  color: forestgreen;
+}
